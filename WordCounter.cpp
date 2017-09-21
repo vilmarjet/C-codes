@@ -1,3 +1,19 @@
+/* 
+	This code will count the number of times that each word appear in a File, then it is going to rank by their numbers.
+(Analyze the algorithmic complexity)
+
+In the function Lire_Instance_map(char* namefile, map<string, int> &Storage) we are building our map.
+Then, for each word in the file of "n" words we are calling the function Storage.find(word) to verify if a similar word was already detected. 
+This function and  insert(pair) are logarithmic in size. Thus, we have nlog(n).
+
+After, for each word on our map (Storage) we are ranking using the "set" container of c++. The set is again logarithmic in size. 
+
+In conclusion, our method has complexity n*log(n) 
+*/
+
+
+
+
 #include <iostream>
 #include <sstream>
 #include <fstream>
@@ -17,26 +33,35 @@ using namespace std;
 
 
 int COUNTER = 0;
-class ToRank{
+
+//This classe store the info of each word of the FILE
+class aWORD{
     public:
         int qt;
         std::string word;
-    ToRank(){};
-    ToRank(const string &w, const int &_qt){qt =_qt; word = w;}
+    aWORD(){};
+    aWORD(const string &w, const int &_qt){qt =_qt; word = w;}
     void set(const string &w, const int &_qt){qt =_qt; word = w;}
-    bool operator< (const ToRank& r) const { return (qt > r.qt);}
+    bool operator< (const aWORD& r) const { return (qt > r.qt);}
 };
 
-
+//funciton to read a file
+// it is implemented after main function
 void Lire_Instance_map(char* nomFichier, map<string, int> &Storage);
+
 
 int main (int argc,char *argv[]) 
 {
-    clock_t     start =clock(); // start time
+  //Declarations
+  clock_t     start =clock(); // cpu time 
   int k;  
-  set <ToRank> ranked;  
-    
-  map<string, int> Storage;  
+  set <aWORD> ranked;  //to rank wods
+  map<string, int> Storage; // our map
+  aWORD inst;
+  map<string, int>::iterator it;
+  set<aWORD>::iterator it3;
+  
+  
   //File to read !
     if (argv[1] != NULL )
     {
@@ -53,7 +78,7 @@ int main (int argc,char *argv[])
         Lire_Instance_map(File, Storage); //Function to read
     }
     
-   
+   //top list
     if (argv[2] != NULL ) // it is a parameter
     {
         istringstream ss (argv[2]);
@@ -66,9 +91,7 @@ int main (int argc,char *argv[])
     }
  
     
-    ToRank inst;
-    map<string, int>::iterator it;
-    set<ToRank>::iterator it3;
+    //to fill the set ... to rank the words
     for (it=Storage.begin(); it != Storage.end(); ++it){
         inst.set(it->first,it->second );
         it3 = ranked.find(inst);
@@ -83,9 +106,7 @@ int main (int argc,char *argv[])
     
     
     //Printing final result
-    
     cout << endl << endl << " The Original File has (" <<  COUNTER << ") words. \n";
-        
     cout << endl << " ************************************\n";
     cout << " The TOP " << k << " words in file are: \n";
     cout << " ************************************\n";
@@ -99,8 +120,8 @@ int main (int argc,char *argv[])
     
     cout <<  endl << " CPU-Time to finish :" << (double) (clock()-start)/CLOCKS_PER_SEC <<" seconds";
 
-    cin.get();
-    return 1;
+    cin.get(); //just stop (type any thing to end)
+    return 1;  //starndar end
 }
 
 inline bool issignal(const string &lastchar)
@@ -120,6 +141,8 @@ inline bool issignal(const string &lastchar)
     return false;
 }//end function issignal
 
+
+//this function read the file and fill the map
 void Lire_Instance_map(char* namefile, map<string, int> &Storage)
 {
   map<string, int>::iterator it;
@@ -174,16 +197,3 @@ void Lire_Instance_map(char* namefile, map<string, int> &Storage)
     */
      
 }//end of Lire_Instance_map
-
-
-/* Answer of question 2.4  (Analyze the algorithmic complexity)
-
-The most expensive functions are Lire_Instance_map and the rank of our words.
-
-In the function Lire_Instance_map(char* namefile, map<string, int> &Storage) we are building our map.
-Then, for each word in the file of "n" words we are calling the function Storage.find(word) to verify if a similar word was already detected. This function and  insert(pair) are logarithmic in size. Thus, we have nlog(n).
-
-After, for each word on our map (Storage) we are ranking using the set container of c++. The set is again logarithmic in size. 
-
-In conclusion, our method has complexity n*log(n) 
-*/
