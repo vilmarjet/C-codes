@@ -11,7 +11,7 @@ Description of the work presented in this repository:
   -Headers:
     No headers used.
   -Classes:
-    We are using the Standard Containers <map> and <set>. Map help us to find the word at each time it appears and the set is used at the end to rank our words. 
+    We are using the Standard Containers <map> and <set>. The <map> help us to store/find words, and <set> is used at the end to rank our words. 
   -Compilation
     To compile on linux type: make WordCounter_make
   -Run
@@ -22,4 +22,6 @@ Description of the work presented in this repository:
      b - Without command line:
         "./WordCounter"
         This way, the application will ask you the "file" and "topList" during the execution.
+  
+  
      
