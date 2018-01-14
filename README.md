@@ -22,6 +22,18 @@ Description of the work presented in this repository:
      b - Without command line:
         "./WordCounter"
         This way, the application will ask you the "file" and "topList" during the execution.
+        
+        
+1) (JobShop_Heuristic) Is a directorty with a main file (JobShopGraspMain.cpp) and a header (head.h). 
+    -Objective: This code aims to design a Grasp meta-heuristic to solve the Job shop scheduling problem. All function are in the file ".cpp" and declaration of function with used structs are in ".h". Moreover, a small intruduction of the problem and of the GRASP are in the  ".cpp". With the code a insert a instance "Example.txt" with 10 jobs and 5 machines.
+    - Compilation: 
+    Put ".h " and ".cpp" in same directory. 
+    In linux just type in command line: g++ JobShopGraspMain.cpp -o JobShopGraspMain
+    - Run:
+    Set all files with Example.txt in same directory and execute "JobShopGraspMain"
+    
+    
+      
   
   
      
