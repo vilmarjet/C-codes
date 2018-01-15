@@ -11,7 +11,7 @@ Description of the work presented in this repository:
       
       - Graph info: Print some useful informations of a directed graph G = (V,E).
       
-2) (Simulations) Is a directorty with three subdirectories, where each of one has a simulation problem:
+2) (Simulations) Is a directorty with three simulation problems:
 
     - S_BankAtt: Simulates a cashier attendence with limite on total time and queue size. 
   
@@ -21,15 +21,18 @@ Description of the work presented in this repository:
         
         
 3) (JobShop_Heuristic) Is a directorty with a main file (JobShopGraspMain.cpp) and a header (head.h). 
-    -Objective: This code aims to design a Grasp meta-heuristic to solve the Job shop scheduling problem. All function are in the file ".cpp" and declaration of function with used structs are in ".h". Moreover, a small intruduction of the problem and of the GRASP are in the  ".cpp". With the code a insert a instance "Example.txt" with 10 jobs and 5 machines.
+
+    - Objective: This code aims to design a Grasp meta-heuristic to solve the Job shop scheduling problem. All functions are in the file ".cpp" and declaration of function with used structs are in ".h". Moreover, a small intro of the problem and of the GRASP are in the  ".cpp". An example instance "Example.txt" with 10 jobs and 5 machines follows the codes.
+    
     - Compilation: 
     Put ".h " and ".cpp" in same directory. 
     In linux just type in command line: g++ JobShopGraspMain.cpp -o JobShopGraspMain.
+    
     - Run:
     Set all files with Example.txt in same directory and execute "JobShopGraspMain".
 
 4) (VRP) is a VC++ code of a Genetic algorithm to find feasible solution for the Vehicle Routing Problem with Time Windows - VRPTW. 
-This file contains all the source codes and Documentation in french. It is a join work with Julia Couto in 2012. In Directory TP3 you find the main.cpp (There is no main() but is them most important file) that contains the implementation of all functions. In "head.h" the functions are declared in structs are developed.     
+This file contains all the source codes and Documentation in french. It is a join work with Julia Couto in 2012. In Directory TP3 you find the main.cpp (There is no main() but is them most important file) that contains the implementation of all functions. In "head.h" the functions are declared and the structs are developed.     
 
     
 
