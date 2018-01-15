@@ -10,24 +10,30 @@ Description of the work presented in this repository:
       - Word Counter: Counts the number of times that each word is used in a file
       
       - Graph info: Print some useful informations of a directed graph G = (V,E).
+      
+2) (Simulations) Is a directorty with three subdirectories, where each of one has a simulation problem:
+
+    - S_BankAtt: Simulates a cashier attendence with limite on total time and queue size. 
+  
+    - S_MachineParalle: is a VC++ code and  simulates a Treatment of some piece in a manufacture with 2 machines in parallel and 1 to assembler. 
+  
+    - SimulationRobot: is a VC++ code and simulates an automatic production line. 
         
         
-2) (JobShop_Heuristic) Is a directorty with a main file (JobShopGraspMain.cpp) and a header (head.h). 
+3) (JobShop_Heuristic) Is a directorty with a main file (JobShopGraspMain.cpp) and a header (head.h). 
     -Objective: This code aims to design a Grasp meta-heuristic to solve the Job shop scheduling problem. All function are in the file ".cpp" and declaration of function with used structs are in ".h". Moreover, a small intruduction of the problem and of the GRASP are in the  ".cpp". With the code a insert a instance "Example.txt" with 10 jobs and 5 machines.
     - Compilation: 
     Put ".h " and ".cpp" in same directory. 
     In linux just type in command line: g++ JobShopGraspMain.cpp -o JobShopGraspMain.
     - Run:
     Set all files with Example.txt in same directory and execute "JobShopGraspMain".
+
+4)(VRP) is a VC++ code of a Genetic algorithm to find feasible solution for the Vehicle Routing Problem with Time Windows - VRPTW. 
+This file contains all the source codes and Documentation in french. It is a join work with Julia Couto in 2012. In Directory TP3 you find the main.cpp (There is no main() but is them most important file) that contains the implementation of all functions. In "head.h" the functions are declared in structs are developed.     
+
     
 
-2) (Simulations) Is a directorty with three subdirectories, where each of one has a simulation problem:
 
-  - S_BankAtt: Simulates a cashier attendence with limite on total time and queue size. 
-  
-  - S_MachineParalle: is a VC++ code and  simulates a Treatment of some piece in a manufacture with 2 machines in parallel and 1 to assembler. 
-  
-  - SimulationRobot: is a VC++ code and simulates an automatic production line. 
 
       
   
