@@ -1,6 +1,7 @@
 
 
 /**************************** (WordCounter.cpp) ****************************/
+
 The (WordCounter.cpp) objective is to rank the most used words in a file. There is no headers. 
 -Classes: We are using the Standard Containers "map" and "set". The "map" help us to store/find words, and "set" 
 is used at the end to rank our words. Moreover we created a classe named as aWORD that store the information of 
@@ -14,6 +15,7 @@ b) Without command line arguments: "./WordCounter" This way, the application wil
 
 
 /**************************** (GraphInfo.cpp) ****************************/
+
 The (GraphInfo.cpp).  Given a graph G=(V,E) this program implements a helper class to perform the following:
 a.  Given a node ID 	[0..N] print the node’s in and out degrees.
 b.  Print the ID of the hub node (the node with maximum number of in + out degrees)
