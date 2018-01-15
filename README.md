@@ -28,7 +28,7 @@ Description of the work presented in this repository:
     - Run:
     Set all files with Example.txt in same directory and execute "JobShopGraspMain".
 
-4)(VRP) is a VC++ code of a Genetic algorithm to find feasible solution for the Vehicle Routing Problem with Time Windows - VRPTW. 
+4) (VRP) is a VC++ code of a Genetic algorithm to find feasible solution for the Vehicle Routing Problem with Time Windows - VRPTW. 
 This file contains all the source codes and Documentation in french. It is a join work with Julia Couto in 2012. In Directory TP3 you find the main.cpp (There is no main() but is them most important file) that contains the implementation of all functions. In "head.h" the functions are declared in structs are developed.     
 
     
