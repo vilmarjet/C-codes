@@ -189,7 +189,6 @@ void Lire_Instance_map(char* namefile, map<string, int> &Storage)
        COUNTER++;
    }//end of while
     
-    
     /*
     for (it =Storage.begin(); it != Storage.end(); ++it)
         cout << it->first << it->second << endl;
